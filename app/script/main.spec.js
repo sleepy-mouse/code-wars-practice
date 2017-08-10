@@ -18,4 +18,13 @@
             assert.equal(findShort("turns out random test cases are easier than writing out basic ones"), 3);
         });
     });
+
+    const highAndLow = require('./main.js').highAndLow;
+    describe('highAndLow', function () {
+        it('highAndLow', function () {
+            assert.equal(highAndLow("1 2 3 4 5"), '5 1');
+            assert.equal(highAndLow("1 2 -3 4 5"), '5 -3');
+            assert.equal(highAndLow("1 9 3 4 -5"), '9 -5');
+        });
+    });
 }

@@ -26,3 +26,18 @@ const info = console.info;
 
     module.exports.findShort = findShort;
 }
+{
+    /**
+     * Highest and Lowest
+     * https://www.codewars.com/kata/highest-and-lowest/javascript
+     * @param numbers
+     */
+    function highAndLow(numbers) {
+        const nums = numbers.split(/\s+/);
+        const max = Math.max(...nums.map(n => Number(n)));
+        const min = Math.min(...nums.map(n => Number(n)));
+        return `${max} ${min}`;
+    }
+
+    module.exports.highAndLow = highAndLow;
+}
