@@ -34,8 +34,8 @@ const info = console.info;
      */
     function highAndLow(numbers) {
         const nums = numbers.split(/\s+/);
-        const max = Math.max(...nums.map(n => Number(n)));
-        const min = Math.min(...nums.map(n => Number(n)));
+        const max = Math.max(...nums.map(Number));
+        const min = Math.min(...nums.map(Number));
         return `${max} ${min}`;
     }
 
