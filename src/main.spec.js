@@ -37,5 +37,16 @@
             assert.equal(check(['t', 'e', 's', 't'], 'e'), true);
             assert.equal(check(['what', 'a', 'great', 'kata'], 'kat'), false);
         });
-    })
+    });
+
+    const solve = mainjs.solve;
+    describe("Numbers in strings", () => {
+        it('Numbers in strings', () => {
+            assert.equal(solve('gh12cdy695m1'), 695);
+            assert.equal(solve('2ti9iei7qhr5'), 9);
+            assert.equal(solve('vih61w8oohj5'), 61);
+            assert.equal(solve('f7g42g16hcu5'), 42);
+            assert.equal(solve('lu1j8qbbb85'), 85);
+        });
+    });
 }
