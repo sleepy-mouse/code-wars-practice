@@ -41,3 +41,22 @@ const info = console.info;
 
     module.exports.highAndLow = highAndLow;
 }
+{
+    /**
+     * https://www.codewars.com/kata/you-only-need-one-beginner/train/javascript
+     */
+    function check1(a, x) {
+        return a.findIndex(e => e === x) !== -1;
+    }
+    function check2(a, x) {
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] === x)
+                return true;
+        }
+        return false;
+    }
+    function check3(a, x) {
+        return a.includes(x);
+    }
+    module.exports.check = check2;
+}
