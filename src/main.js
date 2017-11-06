@@ -61,33 +61,6 @@ const info = console.info; {
     /**
      * https://www.codewars.com/kata/numbers-in-strings/train/javascript
      */
-    function solve(s) {
-        let start = false,
-            isInt = false;
-        let list = new Set();
-        let current = '';
-        for (let i = 0; i < s.length; i++) {
-            let v = Number.parseInt(s.charAt(i));
-            isInt = Number.isInteger(v);
-            if (isInt) {
-                if (!start) {
-                    current = '';
-                    start = true;
-                }
-                current += v;
-                // info('v: %o, current: %o', v, current);
-            } else {
-                start = false;
-                if (current !== '') {
-                    // info('current: %o', current);
-                    list.add(Number.parseInt(current));
-                }
-            }
-            if (i === s.length - 1 && current !== '') {
-                list.add(Number.parseInt(current));
-            }
-        }
-        return Math.max(...list);
-    };
+    let solve = s => Math.max(...s.match(/\d+/g));
     module.exports.solve = solve;
 }
