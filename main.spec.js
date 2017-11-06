@@ -30,10 +30,12 @@
     });
 
     const check = mainjs.check;
-    describe("Basic tests", _ => {
-        assertEquals(check([66, 101], 66), true);
-        assertEquals(check([80, 117, 115, 104, 45, 85, 112, 115], 45), true);
-        assertEquals(check(['t', 'e', 's', 't'], 'e'), true);
-        assertEquals(check(['what', 'a', 'great', 'kata'], 'kat'), false);
+    describe("Basic tests", () => {
+        it('Find element in array', () => {
+            assert.equal(check([66, 101], 66), true);
+            assert.equal(check([80, 117, 115, 104, 45, 85, 112, 115], 45), true);
+            assert.equal(check(['t', 'e', 's', 't'], 'e'), true);
+            assert.equal(check(['what', 'a', 'great', 'kata'], 'kat'), false);
+        });
     })
 }
