@@ -4,18 +4,20 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "mocha src"
+    "test": "mocha src",
+    "check": "npm-check -u"
   },
   "author": "Chris Qiu",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.18.13",
-    "gulp": "^3.9.1",
-    "gulp-jshint": "^2.0.4",
-    "jshint": "^2.9.5",
-    "mocha": "^3.5.0"
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-jshint": "^2.1.0",
+    "jshint": "^2.11.0",
+    "mocha": "^7.0.0",
+    "npm-check": "^5.9.0"
   },
   "dependencies": {
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.15"
   }
 }
